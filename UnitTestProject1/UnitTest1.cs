@@ -14,7 +14,25 @@ namespace UnitTestProject1
             MyCustomLists<int> testList = new MyCustomLists<int>();
             int value1 = 8;
             int expectedvalue = 1;
+
+
+
+            //act
+            testList.Add(value1);
             int actualValue = testList.Count;
+
+            //assert
+            Assert.AreEqual(expectedvalue, actualValue);
+
+        }
+        [TestMethod]
+        public void Add_AddOneValueToList_CapacityIs()
+        {
+            //arrange
+            MyCustomLists<int> testList = new MyCustomLists<int>();
+            int value1 = 1;
+            int expectedvalue = 4;
+            int actualValue = testList.Capacity;
 
 
             //act
@@ -25,42 +43,44 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedvalue, actualValue);
 
         }
-    }[TestMethod]
-    public void Add_AddOneValueToList_CapacityIs()
-    {
-        //arrange
-        MyCustomLists<int> testList = new MyCustomLists<int>();
-        int value1 = 1;
-        int expectedvalue = 1;
-        int actualValue = testList.Capacity;
+        [TestMethod]
+        public void AddOneValueToList_Indexer()
+        {
+            MyCustomLists<int> testList = new MyCustomLists<int>();
 
+            testList.Add(8);
+            int expectedValue = 8;
+            int actualValue = testList[0];
 
-        //act
-        testList.Add(value1);
+            //Assert
 
-
-        //assert
-        Assert.AreEqual(expectedvalue, actualValue);
-
-    }
-    [TestMethod]
-    public void AddOneValueToList_Indexer() 
-    {
-        MyCustomLists<int> testList = new MyCustomLists<int>(0);
-        Index[1];
-        int expectedValue = 1;
-        int actualValue;
-
-        // act
-        MyCustomList<int> i = [i];
-
-
-        Assert.AreEqual(expectedValue, actualValue);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UnderlyingArray()
+        {
 
 
 
-    
-    
-    
-    }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    }   
+
+
+
+
+
+
+
 }
