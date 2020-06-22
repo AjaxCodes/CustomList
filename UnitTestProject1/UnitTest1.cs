@@ -59,11 +59,26 @@ namespace UnitTestProject1
         [TestMethod]
         public void UnderlyingArray()
         {
+            //Arrange
+            MyCustomLists<int> testList = new MyCustomLists<int>();
 
+            int expectedValue;
+            int actualValue;
+            int[] x;
 
+            //Assret
 
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void TestCompareLists() 
+        {
 
-
+        
+        
+        
+        
+        
         }
 
 
