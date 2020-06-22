@@ -96,7 +96,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void UnderlyingArray()
         {
-<<<<<<< HEAD
+
             //arrange
             MyCustomLists<int> testList = new MyCustomLists<int>();
             int expectedValue;
@@ -104,36 +104,14 @@ namespace UnitTestProject1
             testList[2] = 7;
 
             //act
-=======
-            //Arrange
-            MyCustomLists<int> testList = new MyCustomLists<int>();
 
-            int expectedValue;
-            int actualValue;
-            int[] x;
->>>>>>> 529273810c592e00211cfb67347904d19cb83b5d
 
-            //Assret
-
-<<<<<<< HEAD
             //assert
             Assert.AreEqual(expectedValue, actualValue);
 
-=======
-            Assert.AreEqual(expectedValue, actualValue);
+            //asdfasdf
         }
-        [TestMethod]
-        public void TestCompareLists() 
-        {
-
-        
-        
-        
-        
-        
->>>>>>> 529273810c592e00211cfb67347904d19cb83b5d
-        }
-
+      
 
 
 
