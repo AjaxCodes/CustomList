@@ -124,7 +124,7 @@ namespace UnitTestProject3
             int valueThree = 3;
             int valueFour = 4;
             int expectedvalue = 3;
-            int actualValue = testList.Capacity;
+            int actualValue = testList.Count;
 
             //act
             testList.Add(valueOne);
@@ -190,13 +190,24 @@ namespace UnitTestProject3
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
-           
+
             // expected index
             //actual index
-            int expectedValue = 3;
+            int valueOne = 1;
+            int valueThree = 3;
+            int valueFive = 5;
+            int valueTwo = 2;
+            int valueFour = 4;
+
+            int expectedValue = 4;
             int actualValue = testList[2];
 
             //act
+            testList.Add(valueOne);
+            testList.Add(valueTwo);
+            testList.Add(valueThree);
+            testList.Add(valueFour);
+            testList.Add(valueFive);
             testList.Remove(2);
 
 
