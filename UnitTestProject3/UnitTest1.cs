@@ -114,8 +114,94 @@ namespace UnitTestProject3
             int actualValue = testList[0];
             //assert
             Assert.AreEqual(expectedvalue, actualValue);
+        }
+        [TestMethod]
+        public void RemovingfromTheList()
+        {
+            CustomList<int> testList = new CustomList<int>();
+            int valueOne = 1;
+            int expectedvalue = 4;
+            int actualValue = testList.Capacity;
 
+            //act
+            testList.Remove(valueThree);
+
+            //assert
+            Assert.AreEqual(expectedvalue, actualValue);
+        }
+        [TestMethod]
+
+        public void Remove_OneValueToList_CountWillEqualOne()
+        {
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            int value1 = 2;
+            int expectedvalue = 2;
+
+            //act
+            testList.Remove(value1);
+            int actualValue = testList.Count;
+
+            //assert
+            Assert.AreEqual(expectedvalue, actualValue);
+        }
+        [TestMethod]
+        public void RemoveMultipuleValues() 
+        {
+            CustomList<int> testList = new CustomList<int>();
+            int valueOne = 1;
+            int valueThree = 3;
+            int valueFive = 5;
+            int expectedvalue = 8;
+            int actualValue = testList.Capacity;
+
+            //act
+            testList.Remove(valueOne);
+            testList.Remove(valueThree);
+            testList.Remove(valueFive);
+            
+            //assert
+            Assert.AreEqual(expectedvalue, actualValue);
+        }
+        [TestMethod]
+        public void RemoveCheckingIndex() 
+        {
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expectedValue = 3;
+            int actualValue = testList[2];
+
+            //act
+            testList.Remove(3);
+
+
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        
+        [TestMethod]
+        public void Remove_MultipleValesToList_CapacityIs()
+        {
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int valueTwo = 2;
+            int valueFour = 4;
+            int expectedValue = 8;
+            int actualValue = testList.Capacity;
+
+            //Act
+            testList.Remove(valueTwo);
+            testList.Remove(valueFour);
+
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
 
         }
+
+
+
+
+
     }
 }
+
