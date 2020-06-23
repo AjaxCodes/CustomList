@@ -29,6 +29,10 @@ namespace MyCustomList
         {
 
         }
+        public void Remove(T item)
+        {
+
+        }
 
 
     }

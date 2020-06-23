@@ -120,26 +120,40 @@ namespace UnitTestProject3
         {
             CustomList<int> testList = new CustomList<int>();
             int valueOne = 1;
-            int expectedvalue = 4;
+            int valueTwo = 2;
+            int valueThree = 3;
+            int valueFour = 4;
+            int expectedvalue = 3;
             int actualValue = testList.Capacity;
 
             //act
-            testList.Remove(valueThree);
+            testList.Add(valueOne);
+            testList.Add(valueTwo);
+            testList.Add(valueThree);
+            testList.Add(valueFour);
+            testList.Remove(valueFour);
 
             //assert
             Assert.AreEqual(expectedvalue, actualValue);
         }
         [TestMethod]
 
-        public void Remove_OneValueToList_CountWillEqualOne()
+        public void Remove_AValueFromList_RemovedValue()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
-            int value1 = 2;
-            int expectedvalue = 2;
+            int valueOne = 1;
+            int valueTwo = 2;
+            int valueThree = 3;
+            int expectedvalue = 0;
 
             //act
-            testList.Remove(value1);
+            testList.Add(valueOne);
+            testList.Add(valueTwo);
+            testList.Add(valueThree);
+            testList.Remove(valueTwo);
+            testList.Remove(valueOne);
+            testList.Remove(valueThree);
             int actualValue = testList.Count;
 
             //assert
@@ -152,10 +166,18 @@ namespace UnitTestProject3
             int valueOne = 1;
             int valueThree = 3;
             int valueFive = 5;
+            int valueTwo = 2;
+            int valueFour = 4;
             int expectedvalue = 8;
             int actualValue = testList.Capacity;
 
             //act
+            testList.Add(valueOne);
+            testList.Add(valueTwo);
+            testList.Add(valueThree);
+            testList.Add(valueFour);
+            testList.Add(valueFive);
+
             testList.Remove(valueOne);
             testList.Remove(valueThree);
             testList.Remove(valueFive);
@@ -168,11 +190,14 @@ namespace UnitTestProject3
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
+           
+            // expected index
+            //actual index
             int expectedValue = 3;
             int actualValue = testList[2];
 
             //act
-            testList.Remove(3);
+            testList.Remove(2);
 
 
             //Assert
@@ -184,14 +209,16 @@ namespace UnitTestProject3
         {
             //Arrange
             CustomList<int> testList = new CustomList<int>();
-            int valueTwo = 2;
-            int valueFour = 4;
-            int expectedValue = 8;
+            int valueOne = 2;
+            int valueTwo = 4;
+            int expectedValue = 1;
             int actualValue = testList.Capacity;
 
             //Act
+            testList.Add(valueOne);
+            testList.Add(valueTwo);
             testList.Remove(valueTwo);
-            testList.Remove(valueFour);
+            
 
             //Assert
             Assert.AreEqual(expectedValue, actualValue);
