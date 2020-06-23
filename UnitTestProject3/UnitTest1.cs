@@ -1,20 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UnitTestProject1;
-using CustomListProjectGroup;
-
-namespace UnitTestProject1
+using MyCustomList;
+namespace UnitTestProject3
 {
     [TestClass]
     public class UnitTest1
     {
-
-
         [TestMethod]
         public void Add_AddOneValueToList_CountWillEqualOne()
         {
             //arrange
-            MyCustomLists<int> testList = new MyCustomLists<int>();
+            CustomList<int> testList = new CustomList<int>();
             int value1 = 1;
             int expectedvalue = 1;
 
@@ -33,7 +30,7 @@ namespace UnitTestProject1
         public void Add_AddOneValueToList_CapacityIs()
         {
             //arrange
-            MyCustomLists<int> testList = new MyCustomLists<int>();
+            CustomList<int> testList = new CustomList<int>();
             int valueOne = 1;
             int expectedvalue = 4;
             int actualValue = testList.Capacity;
@@ -52,7 +49,8 @@ namespace UnitTestProject1
         public void Add_AddMultipleValuesToList_CapacityIs()
         {
             //arrange
-            MyCustomLists<int> testList = new MyCustomLists<int>();
+
+            CustomList<int> testList = new CustomList<int>();
             int valueOne = 1;
             int valueTwo = 2;
             int valueThree = 3;
@@ -79,7 +77,7 @@ namespace UnitTestProject1
         public void AddOneValueToList_Indexer()
         {
             //arrange
-            MyCustomLists<int> testList = new MyCustomLists<int>();
+            CustomList<int> testList = new CustomList<int>();
             int expectedValue = 8;
             int actualValue = testList[0];
 
@@ -98,39 +96,26 @@ namespace UnitTestProject1
         public void UnderlyingArray()
         {
 
-            //arrange
-            MyCustomLists<int> testList = new MyCustomLists<int>();
-            int expectedValue;
-            int actualValue;
-
+            CustomList<int> testList = new CustomList<int>();
+            int valueOne = 1;
+            int valueTwo = 2;
+            int valueThree = 3;
+            int valueFour = 4;
+            int valueFive = 5;
+            int expectedvalue = 1;
 
             //act
-            testList[2] = 7;
+            testList.Add(valueOne);
+            testList.Add(valueTwo);
+            testList.Add(valueThree);
+            testList.Add(valueFour);
+            testList.Add(valueFive);
 
+            int actualValue = testList[0];
             //assert
-            Assert.AreEqual(expectedValue, actualValue);
+            Assert.AreEqual(expectedvalue, actualValue);
 
-           
+
         }
-      
-
-
-
-
-
-
-
-
-
-
-
-
-    }   
-
-
-
-
-
-
-
+    }
 }
