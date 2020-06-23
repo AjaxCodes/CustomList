@@ -200,7 +200,7 @@ namespace UnitTestProject3
             int valueFour = 4;
 
             int expectedValue = 4;
-            int actualValue = testList[2];
+            
 
             //act
             testList.Add(valueOne);
@@ -209,7 +209,7 @@ namespace UnitTestProject3
             testList.Add(valueFour);
             testList.Add(valueFive);
             testList.Remove(2);
-
+            int actualValue = testList[2];
 
             //Assert
             Assert.AreEqual(expectedValue, actualValue);
@@ -222,14 +222,20 @@ namespace UnitTestProject3
             CustomList<int> testList = new CustomList<int>();
             int valueOne = 1;
             int valueTwo = 2;
-            int expectedValue = 2;
-            int actualValue = testList.Capacity;
+            int valueThree = 3;
+            int valueFour = 4;
+            int valueFive = 5;
+            int expectedValue = 4;
 
             //Act
             testList.Add(valueOne);
             testList.Add(valueTwo);
+            testList.Add(valueThree); 
+            testList.Add(valueFour); 
+            testList.Add(valueFive);
+
             testList.Remove(valueTwo);
-            
+            int actualValue = testList[2];
 
             //Assert
             Assert.AreEqual(expectedValue, actualValue);

@@ -16,6 +16,31 @@ namespace MyCustomList
             CustomList<int> customList = new CustomList<int>();
             customList.Add(2);
             customList.Add(4);
+
+            //string results = customList.ToString(); //"24"
+
+            int age = 32;
+            string myAge = age.ToString();
+
+
+           
+
+            
         }
+            
+
+
+
+
+
+    
+
+
+
     }
+
+
+
+
+
 }

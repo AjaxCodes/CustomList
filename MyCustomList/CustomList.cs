@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,15 +27,48 @@ namespace MyCustomList
 
         public int Capacity { get { return capacity; } set { capacity = value; } }
 
-        public void Add(T item)
+        public CustomList()
         {
+            capacity = 4;
+            T temporary;
+
 
         }
-        public void Remove(T item)
-        {
+        // 1.add item to next available index of items array
+        //2. if there is no available index, then create a new array and double capacity
+        //3. copy values from items array to our newly created array that has the doubled capacity ****
+        //3b. update reference of member variable items array
+        //4. add item to next available index
+         public void Add(T value)
+         {
+            if (capacity == count)
+            {
+                T[] tempArray = new T[capacity *= 2];
 
-        }
+                for (int index = 0; index < count; index++)
+                {
+                    tempArray[index] = items[index];
+                }
 
+                items = tempArray;
+           
+            
+            }
+            items[count] = value;
+            count++;
+
+         }
+
+
+
+            
 
     }
-}
+
+}      
+                
+                
+                
+           
+
+
