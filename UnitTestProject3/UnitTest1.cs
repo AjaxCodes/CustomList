@@ -220,9 +220,9 @@ namespace UnitTestProject3
         {
             //Arrange
             CustomList<int> testList = new CustomList<int>();
-            int valueOne = 2;
-            int valueTwo = 4;
-            int expectedValue = 1;
+            int valueOne = 1;
+            int valueTwo = 2;
+            int expectedValue = 2;
             int actualValue = testList.Capacity;
 
             //Act
