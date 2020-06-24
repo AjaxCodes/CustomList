@@ -11,16 +11,22 @@ namespace MyCustomList
         static void Main(string[] args)
         {
             //List<int> numbers = new List<int>();
-            //numbers.Count = 100;
+            ////numbers.Count = 100;
 
-            CustomList<int> customList = new CustomList<int>();
-            customList.Add(2);
-            customList.Add(4);
+            //CustomList<int> customList = new CustomList<int>();
+            //customList.Add(2);
+            //customList.Add(4);
+            //customList.Add(6);
+            //customList.Add(8);
+            ////customList.Add(10);
+            //customList.Remove(4);
 
-            //string results = customList.ToString(); //"24"
+            //int value = customList[2];
 
-            int age = 32;
-            string myAge = age.ToString();
+            ////string results = customList.ToString(); //"24"
+
+            //int age = 32;
+            //string myAge = age.ToString();
 
 
            
