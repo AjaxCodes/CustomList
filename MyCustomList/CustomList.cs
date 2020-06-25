@@ -85,14 +85,11 @@ namespace MyCustomList
         
 
         public void Remove(T value)
-        {                              //index 0  1  2  3  4
+        {                              
             bool foundValue = false;
             for(int i = 0; i < count; i++)
             {
-                //value
-                //items
                 
-
                 if (items[i].Equals(value))
                 {
                     foundValue = true;
@@ -106,41 +103,20 @@ namespace MyCustomList
                 {
                     items[i] = items[i + 1];
                 }
-                //else if (capacity = items[] && foundValue = true)
-                //{
-                //    break;
-                //}
-
-            }
-            
-            
-
-            //T[] temporaryArray = new T[capacity];
-                  
-            ////items[count] = value;
-            //for (int i = 0; i < count; i--)
-            //{
-            //    temporaryArray[i] = items[i];
-            //}
-
-            //if (count <= capacity)       
-            //{
-
-            //    for (int i = 0; i < count; i--)
-            //    {
-            //        items[i] = items[i + 1];
-            //       //  shifting index over
-            //    }
-            //}
-
-
-            //0. locating the item
-            // if the item is actually in the array...
+                //0. locating the item
+                // if the item is actually in the array...
                 //1. remove an item from items array
                 //2. code shifts all items following index back by one
                 //3. if index withing boundries(4,8,16,32 ect) then subtract 1 from index move everything to the left,
-        }
+            }
 
+        }
+        public void ToString() 
+        {
+         
+        
+        
+        }
 
 
             

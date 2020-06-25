@@ -57,7 +57,7 @@ namespace UnitTestProject3
             int valueFour = 4;
             int valueFive = 5;
             int expectedvalue = 8;
-            int actualValue = testList.Capacity;
+
 
             //act
             testList.Add(valueOne);
@@ -65,6 +65,7 @@ namespace UnitTestProject3
             testList.Add(valueThree);
             testList.Add(valueFour);
             testList.Add(valueFive);
+            int actualValue = testList.Capacity;
 
             //assert
             Assert.AreEqual(expectedvalue, actualValue);
@@ -78,7 +79,7 @@ namespace UnitTestProject3
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
-            int expectedValue = 8;
+            int expectedValue = 0;
             int actualValue = testList[0];
 
             //act
@@ -122,16 +123,17 @@ namespace UnitTestProject3
             int valueOne = 1;
             int valueTwo = 2;
             int valueThree = 3;
-            int valueFour = 4;
+            //int valueFour = 4;
             int expectedvalue = 3;
-            int actualValue = testList.Count;
 
             //act
             testList.Add(valueOne);
             testList.Add(valueTwo);
             testList.Add(valueThree);
-            testList.Add(valueFour);
-            testList.Remove(valueFour);
+            //testList.Add(valueFour);
+            testList.Remove(valueThree);
+            int actualValue = testList.Count;
+
 
             //assert
             Assert.AreEqual(expectedvalue, actualValue);
@@ -145,7 +147,7 @@ namespace UnitTestProject3
             int valueOne = 1;
             int valueTwo = 2;
             int valueThree = 3;
-            int expectedvalue = 0;
+            int expectedvalue = 3;
 
             //act
             testList.Add(valueOne);
@@ -160,7 +162,7 @@ namespace UnitTestProject3
             Assert.AreEqual(expectedvalue, actualValue);
         }
         [TestMethod]
-        public void RemoveMultipuleValues() 
+        public void RemoveMultipuleValues()
         {
             CustomList<int> testList = new CustomList<int>();
             int valueOne = 1;
@@ -168,7 +170,7 @@ namespace UnitTestProject3
             int valueFive = 5;
             int valueTwo = 2;
             int valueFour = 4;
-            int expectedvalue = 8;
+            int expectedvalue = 4;
             int actualValue = testList.Capacity;
 
             //act
@@ -181,12 +183,12 @@ namespace UnitTestProject3
             testList.Remove(valueOne);
             testList.Remove(valueThree);
             testList.Remove(valueFive);
-            
+
             //assert
             Assert.AreEqual(expectedvalue, actualValue);
         }
         [TestMethod]
-        public void RemoveCheckingIndex() 
+        public void RemoveCheckingIndex()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
@@ -200,7 +202,7 @@ namespace UnitTestProject3
             int valueFour = 4;
 
             int expectedValue = 4;
-            
+
 
             //act
             testList.Add(valueOne);
@@ -214,7 +216,7 @@ namespace UnitTestProject3
             //Assert
             Assert.AreEqual(expectedValue, actualValue);
         }
-        
+
         [TestMethod]
         public void Remove_MultipleValesToList_CapacityIs()
         {
@@ -230,8 +232,8 @@ namespace UnitTestProject3
             //Act
             testList.Add(valueOne);
             testList.Add(valueTwo);
-            testList.Add(valueThree); 
-            testList.Add(valueFour); 
+            testList.Add(valueThree);
+            testList.Add(valueFour);
             testList.Add(valueFive);
 
             testList.Remove(valueTwo);
@@ -242,9 +244,38 @@ namespace UnitTestProject3
 
         }
 
+        [TestMethod]
+        public void ConvertToStringCapacity()
+        {
 
 
 
+
+
+        }
+        [TestMethod]
+        public void ConvertToStringUnderLyingArray()
+        {
+
+
+
+
+
+
+
+
+
+        }
+        [TestMethod]
+        public void ConvertToStringTest3() 
+        {
+        
+        
+        
+        
+        
+        
+        }
 
     }
 }
