@@ -93,11 +93,16 @@ namespace MyCustomList
                 if (items[i].Equals(value))
                 {
                     foundValue = true;
-                    items[i] = items[i + 1];
+                    // if (i != capacity - 1) // if we're not on the last iteration 
+                    if (!(i == capacity - 1)) // if we're not on the last iteration 
+                    {
+                        items[i] = items[i + 1];
+                    }
+                    
                 }
                 else if ( i == count - 1)
                 {
-                    T[] temporaryArray = new T[capacity];
+                   
                 }
                 else if (foundValue == true)
                 {
@@ -108,6 +113,10 @@ namespace MyCustomList
                 //1. remove an item from items array
                 //2. code shifts all items following index back by one
                 //3. if index withing boundries(4,8,16,32 ect) then subtract 1 from index move everything to the left,
+            }
+            if (foundValue)
+            {
+                count--;
             }
 
         }

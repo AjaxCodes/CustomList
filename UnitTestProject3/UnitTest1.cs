@@ -123,14 +123,14 @@ namespace UnitTestProject3
             int valueOne = 1;
             int valueTwo = 2;
             int valueThree = 3;
-            //int valueFour = 4;
+            int valueFour = 4;
             int expectedvalue = 3;
 
             //act
             testList.Add(valueOne);
             testList.Add(valueTwo);
             testList.Add(valueThree);
-            //testList.Add(valueFour);
+            testList.Add(valueFour);
             testList.Remove(valueThree);
             int actualValue = testList.Count;
 
@@ -147,7 +147,7 @@ namespace UnitTestProject3
             int valueOne = 1;
             int valueTwo = 2;
             int valueThree = 3;
-            int expectedvalue = 3;
+            int expectedvalue = 0;
 
             //act
             testList.Add(valueOne);
@@ -245,8 +245,16 @@ namespace UnitTestProject3
         }
 
         [TestMethod]
-        public void ConvertToStringCapacity()
+        public void ConvertToStringTest1()
         {
+
+
+
+            // { 1, 2, 3 }
+            // "123"
+
+            // { }
+            // ""
 
 
 
@@ -254,7 +262,7 @@ namespace UnitTestProject3
 
         }
         [TestMethod]
-        public void ConvertToStringUnderLyingArray()
+        public void ConvertToStringTest2()
         {
 
 
