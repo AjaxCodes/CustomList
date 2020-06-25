@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyCustomList;
@@ -245,53 +246,87 @@ namespace UnitTestProject3
 
         }
 
+
         [TestMethod]
         public void ConvertToStringTest1()
         {
 
             //Arrange
-            CustomList<int> testList;
-            testList = new CustomList<int>();
-             
+            CustomList<int> testList = new CustomList<int>();
+
             int valueOne = 1;
             int valueTwo = 2;
             int valueThree = 3;
 
-            int expectedValue;
-            int actualValue;
+            string expectedValue = "123";
+            string actualValue;
 
             //Act
-           
-            testList.Add(valueOne);
-            testList.Add(valueTwo);
-            testList.Add(valueThree);
 
+            testList.Add(1);
+            testList.Add(2);
+            testList.Add(3);
+            actualValue = testList.ToString();
 
 
             //Assert
-            //Assert.AreEqual(expectedValue, actualValue);
-
-
-            // { 1, 2, 3 }
-            // "123"
-
-            // { }
-            // ""
-
+            Assert.AreEqual(expectedValue, actualValue);
 
         }
+
+
         [TestMethod]
         public void ConvertToStringTest2()
         {
 
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+
+            int valueOne = 1;
+            int valueTwo = 2;
+            int valueThree = 3;
+            int valueFour = 4;
+            int valueFive = 5;
+
+            string expectedValue = "12345";
+            string actualValue;
+
+            //Act
+
+            testList.Add(1);
+            testList.Add(2);
+            testList.Add(3);
+            testList.Add(4);
+            testList.Add(5);
+            actualValue = testList.ToString();
 
 
-
-
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
 
 
         }
-   
+
+
+        [TestMethod]
+        public void ConvertToStringTest3()
+        {
+
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+
+            string expectedValue = " ";
+            string actualValue;
+
+            //Act
+            actualValue = testList.ToString();
+
+
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+
+        }
+
     }
 
 }

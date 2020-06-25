@@ -120,15 +120,18 @@ namespace MyCustomList
             }
 
         }
-        public void ToString(T value) 
+        public override string ToString() 
         {
-            
-        
-        
+            string listAsAString = "";
+
+            for (int i = 0; i < count; i++)
+            {
+                listAsAString += items[i].ToString();
+                // listAsAString = listAsAString + items[i].ToString();
+            }
+
+            return listAsAString;
         }
-
-
-            
 
     }
 
