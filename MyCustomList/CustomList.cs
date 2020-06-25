@@ -120,9 +120,9 @@ namespace MyCustomList
             }
 
         }
-        public void ToString() 
+        public void ToString(T value) 
         {
-         
+            
         
         
         }

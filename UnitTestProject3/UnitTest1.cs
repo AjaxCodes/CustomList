@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyCustomList;
 namespace UnitTestProject3
@@ -248,6 +249,27 @@ namespace UnitTestProject3
         public void ConvertToStringTest1()
         {
 
+            //Arrange
+            CustomList<int> testList;
+            testList = new CustomList<int>();
+             
+            int valueOne = 1;
+            int valueTwo = 2;
+            int valueThree = 3;
+
+            int expectedValue;
+            int actualValue;
+
+            //Act
+           
+            testList.Add(valueOne);
+            testList.Add(valueTwo);
+            testList.Add(valueThree);
+
+
+
+            //Assert
+            //Assert.AreEqual(expectedValue, actualValue);
 
 
             // { 1, 2, 3 }
@@ -255,9 +277,6 @@ namespace UnitTestProject3
 
             // { }
             // ""
-
-
-
 
 
         }
@@ -271,20 +290,9 @@ namespace UnitTestProject3
 
 
 
-
-
         }
-        [TestMethod]
-        public void ConvertToStringTest3() 
-        {
-        
-        
-        
-        
-        
-        
-        }
-
+   
     }
+
 }
 
