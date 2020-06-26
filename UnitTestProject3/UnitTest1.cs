@@ -327,6 +327,20 @@ namespace UnitTestProject3
 
         }
 
+
+        [TestMethod]
+        public static void OverloadOperator()
+        {
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() { 2, 1, 6 };
+            CustomList<int> result = one - two;
+            
+        }
+
+
+
+
+
     }
 
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
@@ -144,24 +145,40 @@ namespace MyCustomList
             evenList = new List<int>() { 2, 4, 6 };
             int numbers = new List<int>();
 
-           for (int i = 0; i < count; i++) 
-           {
+            for (int i = 0; i < count; i++)
+            {
 
-             numbers = odds.Count[i] + evens.Count[i];
+                numbers = odds.Count[i] + evens.Count[i];
 
-           }
+            }
             return result;
 
         }
 
-            
-       
+        //List<int> result = evens + odds;
+        //result has 1,3,5,2,4,6
+        // Overload + operator to add two Box objects.
 
-            //List<int> result = evens + odds;
-            //result has 1,3,5,2,4,6
-            // Overload + operator to add two Box objects.
-       
+        public CustomList<T> operator -(CustomList<T> listOne, CustomList<T> listTwo)
+        {
+            CustomList<T> result = new CustomList<T>();
+
+            foreach (int items listOne)
+            {
+                if (listTwo.Contains(items))
+                    result.Add(items);
+            }
+
+            return result;
+
+        }
+        
+
+
     }
+
+
+
 
 
 
