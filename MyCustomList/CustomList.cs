@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -22,12 +23,12 @@ namespace MyCustomList
             get
             {
                 //if statements
-                if (index >= 0 && index < count) 
+                if (index >= 0 && index < count)
                 {
                     return items[index];
                 }
                 return items[index];
-                
+
             }
             set
             {
@@ -82,14 +83,14 @@ namespace MyCustomList
             count++;
 
         }
-        
+
 
         public void Remove(T value)
-        {                              
+        {
             bool foundValue = false;
-            for(int i = 0; i < count; i++)
+            for (int i = 0; i < count; i++)
             {
-                
+
                 if (items[i].Equals(value))
                 {
                     foundValue = true;
@@ -98,11 +99,11 @@ namespace MyCustomList
                     {
                         items[i] = items[i + 1];
                     }
-                    
+
                 }
-                else if ( i == count - 1)
+                else if (i == count - 1)
                 {
-                   
+
                 }
                 else if (foundValue == true)
                 {
@@ -120,7 +121,7 @@ namespace MyCustomList
             }
 
         }
-        public override string ToString() 
+        public override string ToString()
         {
             string listAsAString = "";
 
@@ -133,9 +134,43 @@ namespace MyCustomList
             return listAsAString;
         }
 
+        public void AddTwoLists(CustomList<T> oddsList, CustomList<T> evenList)
+        {
+            List<int> odds;
+            List<int> evens;
+            string result = " ";
+
+            oddsList = new List<int>() { 1, 3, 5 };
+            evenList = new List<int>() { 2, 4, 6 };
+            int numbers = new List<int>();
+
+           for (int i = 0; i < count; i++) 
+           {
+
+             numbers = odds.Count[i] + evens.Count[i];
+
+           }
+            return result;
+
+        }
+
+            
+       
+
+            //List<int> result = evens + odds;
+            //result has 1,3,5,2,4,6
+            // Overload + operator to add two Box objects.
+       
     }
 
-}      
+
+
+
+
+}
+        
+
+    
                 
                 
                 
